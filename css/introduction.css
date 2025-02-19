@@ -1,10 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
 
         * {
             font-family: "Nanum Pen Script", serif;
             font-weight: 400;
             font-style: normal;
         }
+
+   
         html,
         body {
             margin: 0;
@@ -92,7 +95,7 @@
             margin: 0;
         }
 
-        /*자기소개 입력칸*/
+        /*자기소개 입력부분*/
         .introduce {
             width: 600px;
             height: 500px;
@@ -262,3 +265,4 @@
             display: flex;
             justify-content: space-between;
         }
+  
