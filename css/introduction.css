@@ -1,0 +1,266 @@
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+        * {
+            font-family: "Nanum Pen Script", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        /*배경색 꽉 채워주기*/
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .background {
+            background: linear-gradient(#F0586A, white);
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            border: none;
+            box-sizing: border-box;
+        }
+
+        /*내용 입력부분*/
+        .main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+        }
+
+        @keyframes floating {
+            0% {
+                transform: translateY(10px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(10px);
+            }
+        }
+
+        /*사진위에 사진 올릴 수 있도록 묶기*/
+        .container {
+            position: relative;
+            width: 600px;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .idCard {
+            width: 100%;
+            height: 100%;
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        .picture {
+            position: absolute;
+            top: 43%;
+            left: 37%;
+            transform: translate(-50%, -50%);
+            width: 150px;
+            height: 175px;
+
+            border-radius: 10px;
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        .intro {
+            position: absolute;
+            top: 68%;
+            left: 45%;
+            transform: translateX(-50%);
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        .title {
+            margin-bottom: 5px;
+        }
+
+        .name {
+            margin: 0;
+        }
+
+        /*자기소개 입력부분*/
+        .introduce {
+            width: 600px;
+            height: 500px;
+
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            margin: 50px 100px 50px 50px;
+
+            font-size: 20px;
+            font-weight: bold;
+
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 25px;
+        }
+
+        .text {
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .thick {
+            font-size: 35px;
+            font-weight: 800;
+        }
+
+        .thin {
+            font-weight: 400;
+            font-size: 30px;
+        }
+
+        .blogLink {
+            color: black;
+            font-weight: 400;
+            font-size: 30px;
+            text-decoration: none;
+        }
+
+        .blogLink:hover {
+            color: darkgray;
+            font-weight: 400;
+            font-size: 30px;
+            text-decoration: underline;
+        }
+
+        .aboutMe {
+            font-size: 50px;
+            font-weight: 500;
+            text-align: center;
+            width: 100%;
+        }
+
+        h2 {
+            margin-left: 190px;
+
+        }
+
+        .comments_box {
+            width: 80%;
+            height: 300px;
+            margin: 0px auto 10px auto;
+            overflow-y: auto;
+            box-shadow: darkgray;
+            border: 1px solid #FFC0CB;
+            border-radius: 10px;
+            background-color: transparent;
+            padding: 10px;
+        }
+
+        button {
+            background-color: #F0586A;
+            color: white;
+            padding: 6px 11px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+
+
+        }
+
+        .reply-button {
+            font-size: 14px;
+            padding: 4px 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #e74747;
+            color: white;
+        }
+
+        .comment {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            background-color: #fff;
+            position: relative;
+
+        }
+
+        .comment p {
+            margin: 5px 0;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #888;
+            position: absolute;
+            bottom: 5px;
+            right: 10px;
+        }
+
+        .reply-input {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .reply-input textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 5px;
+        }
+
+        .answer {
+            margin-top: 5px;
+            font-weight: bold;
+            color: black;
+        }
+
+        #question {
+            width: 100%;
+            max-width: 1500px;
+            height: 30px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .form-container {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0 0 170px;
+            border-radius: 5px;
+            border: 0.5px solid #FFC0CB;
+        }
+
+        .qnaForm {
+            display: flex;
+            justify-content: space-between;
+        }

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자기소개 페이지 상세1</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+        * {
+            font-family: "Nanum Pen Script", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        /*배경색 꽉 채워주기*/
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .background {
+            background: linear-gradient(#F0586A, white);
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            border: none;
+            box-sizing: border-box;
+        }
+
+        /*내용 입력부분*/
+        .main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+        }
+
+        @keyframes floating {
+            0% {
+                transform: translateY(10px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(10px);
+            }
+        }
+
+        /*사진위에 사진 올릴 수 있도록 묶기*/
+        .container {
+            position: relative;
+            width: 600px;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .idCard {
+            width: 100%;
+            height: 100%;
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        .picture {
+            position: absolute;
+            top: 43%;
+            left: 37%;
+            transform: translate(-50%, -50%);
+            width: 150px;
+            height: 175px;
+
+            border-radius: 10px;
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        .intro {
+            position: absolute;
+            top: 68%;
+            left: 45%;
+            transform: translateX(-50%);
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        .title {
+            margin-bottom: 5px;
+        }
+
+        .name {
+            margin: 0;
+        }
+
+        /*자기소개 입력부분*/
+        .introduce {
+            width: 600px;
+            height: 500px;
+
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            margin: 50px 100px 50px 50px;
+
+            font-size: 20px;
+            font-weight: bold;
+
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 25px;
+        }
+
+        .text {
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .thick {
+            font-size: 35px;
+            font-weight: 800;
+        }
+
+        .thin {
+            font-weight: 400;
+            font-size: 30px;
+        }
+
+        .blogLink {
+            color: black;
+            font-weight: 400;
+            font-size: 30px;
+            text-decoration: none;
+        }
+
+        .blogLink:hover {
+            color: darkgray;
+            font-weight: 400;
+            font-size: 30px;
+            text-decoration: underline;
+        }
+
+        .aboutMe {
+            font-size: 50px;
+            font-weight: 500;
+            text-align: center;
+            width: 100%;
+        }
+
+        h2 {
+            margin-left: 190px;
+
+        }
+
+        .comments_box {
+            width: 80%;
+            height: 300px;
+            margin: 0px auto 10px auto;
+            overflow-y: auto;
+            box-shadow: darkgray;
+            border: 1px solid #FFC0CB;
+            border-radius: 10px;
+            background-color: transparent;
+            padding: 10px;
+        }
+
+        button {
+            background-color: #F0586A;
+            color: white;
+            padding: 6px 11px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+
+
+        }
+
+        .reply-button {
+            font-size: 14px;
+            padding: 4px 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #e74747;
+            color: white;
+        }
+
+        .comment {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            background-color: #fff;
+            position: relative;
+
+        }
+
+        .comment p {
+            margin: 5px 0;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #888;
+            position: absolute;
+            bottom: 5px;
+            right: 10px;
+        }
+
+        .reply-input {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .reply-input textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 5px;
+        }
+
+        .answer {
+            margin-top: 5px;
+            font-weight: bold;
+            color: black;
+        }
+
+        #question {
+            width: 100%;
+            max-width: 1500px;
+            height: 30px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .form-container {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0 0 170px;
+            border-radius: 5px;
+            border: 0.5px solid #FFC0CB;
+        }
+
+        .qnaForm {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getFirestore, collection, addDoc, onSnapshot, orderBy, query, updateDoc, doc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCqPjlFsuIKZ3N4ZfO9mTKQs8Sya6aKCKs",
+            authDomain: "introducing-fa5ae.firebaseapp.com",
+            projectId: "introducing-fa5ae",
+            storageBucket: "introducing-fa5ae",
+            messagingSenderId: "190395607602",
+            appId: "1:190395607602:web:5024130aaa95b9285f2a2b",
+            measurementId: "G-YJFDJBS7SN"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // 변경된 부분: 페이지별 컬렉션 이름 설정
+        const collectionName = 'qna_2'; // 페이지 1의 경우
+
+        function fetchComments() {
+            const commentsRef = collection(db, collectionName); // 변경된 부분
+            const q = query(commentsRef, orderBy('createdAt', 'desc'));
+            onSnapshot(q, (snapshot) => {
+                const commentsData = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+
+                const commentsContainer = document.getElementById('commentsContainer');
+                commentsContainer.innerHTML = '';
+                commentsData.forEach(entry => {
+                    const commentDiv = document.createElement('div');
+                    commentDiv.className = 'comment';
+                    commentDiv.innerHTML = `
+                        <p>${entry.question}</p>
+                        <button class="reply-button" onclick="toggleReplyInput('${entry.id}')">답변하기</button>
+                        <div class="reply-input" id="reply-input-${entry.id}">
+                            <textarea placeholder="답변을 입력하세요" id="answer-${entry.id}"></textarea>
+                            <button onclick="submitAnswer('${entry.id}')">확인</button>
+                        </div>
+                        ${entry.answer ? `<div class="answer" >답변: ${entry.answer}</div>` : ''}
+                        <span class="timestamp">${entry.createdAt.toDate().toLocaleString()}</span>
+                    `;
+                    commentsContainer.appendChild(commentDiv);
+                });
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            fetchComments();
+
+            document.getElementById('qnaForm').onsubmit = async function (event) {
+                event.preventDefault();
+                const question = document.getElementById('question').value;
+
+                try {
+                    await addDoc(collection(db, collectionName), { // 변경된 부분
+                        question: question,
+                        createdAt: new Date()
+                    });
+
+                    alert('질문이 제출되었습니다.');
+                    document.getElementById('question').value = '';
+                } catch (error) {
+                    console.error("Error adding document: ", error);
+                    alert('오류가 발생했습니다. 다시 시도해 주세요.');
+                }
+            }
+        });
+
+        window.toggleReplyInput = function (commentId) {
+            const replyInput = document.getElementById(`reply-input-${commentId}`);
+            replyInput.style.display = replyInput.style.display === 'none' || replyInput.style.display === '' ? 'block' : 'none';
+        }
+
+        window.submitAnswer = async function (commentId) {
+            const answer = document.getElementById(`answer-${commentId}`).value;
+
+            if (!answer) {
+                alert('답변을 입력하세요.');
+                return;
+            }
+
+            try {
+                const commentRef = doc(db, collectionName, commentId); // 변경된 부분
+                await updateDoc(commentRef, {
+                    answer: answer
+                });
+
+                alert('답변이 제출되었습니다.');
+                document.getElementById(`answer-${commentId}`).value = '';
+
+                const replyInput = document.getElementById(`reply-input-${commentId}`);
+                replyInput.style.display = 'none';
+
+                const commentDiv = document.querySelector(`#commentsContainer .comment:nth-child(${Array.from(document.querySelectorAll('.comment')).findIndex(el => el.innerHTML.includes(commentId)) + 1})`);
+                const existingAnswerDiv = commentDiv.querySelector('.answer');
+                if (!existingAnswerDiv) {
+                    const answerDiv = document.createElement('div');
+                    answerDiv.className = 'answer';
+                    answerDiv.textContent = `답변: ${answer}`;
+                    commentDiv.appendChild(answerDiv);
+                }
+            } catch (error) {
+                console.error("Error updating document: ", error);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="background">
+
+        <div class="main">
+            <div class="container">
+                <img class="idCard"
+                    src="https://postfiles.pstatic.net/MjAyNTAyMTlfODgg/MDAxNzM5OTI0NTQ2NTQ3.nLD3Pmiyds9bM0Vnvq9w6Swj6IGrceiPfcx6Ktj3FYcg.QWf1v1f_aLHtJ81Ra2z-F6pcbWtntdUQKd1gScExBuog.PNG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png?type=w580"
+                    alt="Background">
+                <img src="https://teamsparta.notion.site/image/attachment%3A854e2e66-ed7f-4e19-a0c2-1c1cbbdaa968%3AKakaoTalk_20250218_194905462.jpg?table=block&id=19e2dc3e-f514-80ab-a1df-ea7811205e11&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=1390&userId=&cache=v2"
+                    class="picture" alt="Overlay">
+                <div class="intro">
+                    <p class="title">팀원</p>
+                    <p class="name">김하정</p>
+                </div>
+            </div>
+            <div class="introduce">
+                <div class="aboutMe">
+                    <span>⭐ ABOUT ME</span>
+                </div>
+                <div class="text">
+                    <p><img src="https://cdn-icons-png.flaticon.com/512/8068/8068016.png" alt="number 1 icon"
+                            width="30">
+                        <span class="thick"> MBTI </span><span class="thin">INFP</span>
+                </div>
+                <div class="text">
+                    <p><img src="https://cdn-icons-png.flaticon.com/512/8068/8068072.png" alt="number 2 icon"
+                            width="30">
+                        <span class="thick">생년월일 </span><span class="thin">1995.05.07</span>
+                </div>
+                <div class="text">
+                    <p><img src="https://cdn-icons-png.flaticon.com/512/8068/8068126.png" alt="number 3 icon"
+                            width="30">
+                        <span class="thick">전공 유무 </span><span class="thin">비전공</span>
+                </div>
+                <div class="text">
+                    <p><img src="https://cdn-icons-png.flaticon.com/512/8068/8068185.png" alt="number 4 icon"
+                            width="30">
+                        <span class="thick">블로그 </span><a href="https://velog.io/@jess_kim/series" class="blogLink"
+                            target="_blank">https://velog.io/@jess_kim/series</a>
+                </div>
+                <div class="text">
+                    <p><img src="https://cdn-icons-png.flaticon.com/512/8068/8068239.png" alt="number 5 icon"
+                            width="30">
+                        <span class="thick">목표 </span><span class="thin">풀스택 만능 프리랜서 개발자 되기</span>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div>
+                <h2 style="font-size: 40px; margin-bottom: 0;">⭐ QnA</h2>
+                <div class="comments_box" id="commentsContainer">
+                </div>
+                <div class="form-container">
+                    <h3 style="font-size: 30px; margin-top: 0; margin-bottom: 10px;">⭐ ASK ME</h3>
+                    <form class="qnaForm" id="qnaForm">
+                        <textarea style="font-size: 17px; width: 95%;" id="question" placeholder="질문을 입력하세요"
+                            required></textarea>
+                        <button type="submit" class="submit-button">완료</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
