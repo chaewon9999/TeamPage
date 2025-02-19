@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>방명록 작성</title>
+    <link rel="stylesheet" href="css/guestbox.css">
     <script type="module">
         // Firebase 모듈 
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
@@ -35,7 +36,7 @@
                     await addDoc(collection(db, 'guestbook'), {
                         name: name,
                         message: message,
-                        createdAt: new Date() // 글 순서대로 넣기위한 시간저장
+                        createdAt: new Date() // 글 순서대로 넣기위한 
                     });
 
                     alert('완료되었습니다.');
@@ -57,7 +58,6 @@
             }
         });
     </script>
-    
 </head>
 <body>
     <h2>방명록 작성</h2>
@@ -73,6 +73,5 @@
         <button type="submit">완료</button>
         <button type="button" id="closePopup">닫기</button>
     </form>
-
 </body>
 </html>
