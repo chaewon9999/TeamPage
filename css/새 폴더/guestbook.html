@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>방명록 작성</title>
+    <script type="module">
+        // Firebase 모듈 
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
+
+        // Firebase 초기화
+        const firebaseConfig = {
+            apiKey: "AIzaSyCqPjlFsuIKZ3N4ZfO9mTKQs8Sya6aKCKs",
+            authDomain: "introducing-fa5ae.firebaseapp.com",
+            projectId: "introducing-fa5ae",
+            storageBucket: "introducing-fa5ae.appspot.com",
+            messagingSenderId: "190395607602",
+            appId: "1:190395607602:web:5024130aaa95b9285f2a2b",
+            measurementId: "G-YJFDJBS7SN"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // 방명록 제출 
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('guestbookForm').onsubmit = async function(event) {
+                event.preventDefault(); // none 입력 금지코드
+                const name = document.getElementById('name').value;
+                const message = document.getElementById('message').value;
+
+                try {
+                    // Firestore에 데이터 저장
+                    await addDoc(collection(db, 'guestbook'), {
+                        name: name,
+                        message: message,
+                        createdAt: new Date() // 글 순서대로 넣기위한 
+                    });
+
+                    alert('완료되었습니다.');
+
+                    // 입력 초기화
+                    document.getElementById('name').value = '';
+                    document.getElementById('message').value = '';
+
+                    window.close();
+                } catch (error) {
+                    console.error("Error adding document: ", error);
+                    alert('오류가 발생했습니다. 다시 시도해 주세요.');
+                }
+            }
+
+            // 닫기 버튼 클릭 시 팝업 닫기
+            document.getElementById('closePopup').onclick = function() {
+                window.close(); // 현재 팝업 창 닫기
+            }
+        });
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+        body {
+            font-family: "Nanum Pen Script", serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: black;
+        }
+        
+        h2 {
+            font-size: 70px;
+            color: #333;
+            text-align: center;
+        }
+        
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'Nanum Pen Script', cursive;
+            font-size: 20px; 
+        }
+
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            height: 130px;
+        }
+
+        
+        #closePopup {
+            background-color: #dc3545; 
+        }
+        
+        #closePopup:hover {
+            background-color: #c82333; 
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <h2>방명록 작성</h2>
+    <form id="guestbookForm">
+        <div class="form-floating">
+            <label for="name">이름:</label>
+            <input type="text" id="name" placeholder="이름을 입력하세요" required>
+        </div>
+        <div class="form-floating">
+            <label for="message">내용:</label>
+            <textarea id="message" placeholder="내용을 입력하세요" required></textarea>
+        </div>
+        <button type="submit">완료</button>
+        <button type="button" id="closePopup">닫기</button>
+    </form>
+</body>
+</html>

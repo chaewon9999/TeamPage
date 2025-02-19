@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우리 팀을 소개합니다</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+        * {
+            font-family: "Nanum Pen Script", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        html,
+        body {
+            height: 100%;
+            /* 페이지 전체 높이를 100%로 설정 */
+            margin: 0;
+        }
+        a{text-decoration: none;}
+
+        .main {
+            color: white;
+            background-image: url('https://s3.ap-northeast-2.amazonaws.com/blog.spartacodingclub.kr/sparta-supporters.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            /* 화면 높이를 100vh로 설정하여 화면을 꽉 채우도록 함 */
+
+            /* Flexbox 설정으로 중앙 상단에 정렬 */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* 상단 정렬 */
+            align-items: center; /* 수평 중앙 정렬 */
+            text-align: center; /* 텍스트도 중앙 정렬 */
+            padding-top: 0px; /* 상단에 충분한 여백을 주어 중앙 상단 위치하도록 설정 */
+        }
+
+        body {
+            background-color: white;
+            color: black;
+            overflow-x: hidden;
+            /* 수평 스크롤을 없앰 */
+        }
+
+        /* 배경 이미지 설정 */
+        .background {
+            width: 600px;
+            height: 500px;
+            background-image: url('https://img.freepik.com/premium-vector/identity-card-illustration_1297-417.jpg?w=360');
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        /* 그 위에 올릴 이미지 스타일 */
+        .foreground-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -30%);
+            width: 195px;
+            height: 173px;
+            border-radius: 5%;
+        }
+
+        .q1 {
+            margin-bottom: 50px;
+            width:550px;
+            margin-left:100px;
+            /* 각 팀원 소개 항목에 아래 여백 추가 */
+        }
+        .q2{
+            width:370px;
+            margin-left:300px;
+        }
+        .text-box {
+            margin-top: 50px;
+            /* 추가된 콘텐츠가 자연스럽게 아래로 이어지도록 여백 설정 */
+        }
+        /*중간 취압*/
+        .main h1 {
+            transform: translateX(-10px);
+        }
+
+        .main p {
+            transform: translateX(80px);
+        }
+
+        h2 {
+            font-size: 70px;
+        }
+
+        .text-box p {
+            font-size: 30px;
+            padding-left: 150px;
+        }
+        
+
+        /* 팀원소개 제목 스타일 */
+        .background img{
+            transition: all 0.3s ease-in;
+        }
+        .sub_box:hover  img{
+            opacity:0.05;
+            transition: all 0.3s ease-in;
+        }
+        .sub_box:hover .txt_box{
+            opacity:1;
+            transition: all 0.3s ease-in;
+        }
+        .txt_box{
+            position:absolute;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%, -36%);
+            opacity:0;
+            transition: all 0.4s ease-in-out;
+        }
+        .txt_box  span{
+            font-size:2rem;
+        }
+        .sub_text{
+            position:absolute;
+            top: 87%;
+            left: 50%;
+            text-align: center;
+            transform: translate(-50%, -3%);
+            transition: all 0.3s ease-in;
+        }
+        .sub_text .title{
+            font-size:1.8rem;
+            line-height: 1rem;
+            margin-bottom:0;
+        }
+        .sub_text .name{
+            font-size:2rem;
+            margin-bottom:0;
+        }
+        .sub_box:hover .sub_text{
+            opacity:0;
+            transition: all 0.3s ease-in;
+        }
+        .sub_box{
+            width: 210px;
+            height: 390px;
+            position: absolute;
+            transform: translate(93%,14%);
+            cursor: pointer;
+            transition: all 0.3s ease-in;
+        }
+         /* .guestbox ~ td:nth-child(2) 까지 방명록테이블 */
+         .guest_box {
+            width: 80%;
+            height: 500px;
+            margin: 30px auto;
+            overflow-y: auto;
+            box-shadow: none;
+            border: none;
+        }
+
+        button {
+            background-color: #e74747;
+            color: white;
+            padding: 6px 11px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #e74747;
+            color: white;
+        }
+
+        td:first-child {
+            width: 20%;
+        }
+
+        td:nth-child(2) {
+            width: 80%;
+        }
+    </style>
+
+
+<script type="module">
+        // Firebase 모듈 불러오기
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getFirestore, collection, onSnapshot, orderBy, query } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
+
+        // Firebase 초기화
+        const firebaseConfig = {
+            apiKey: "AIzaSyCqPjlFsuIKZ3N4ZfO9mTKQs8Sya6aKCKs",
+            authDomain: "introducing-fa5ae.firebaseapp.com",
+            projectId: "introducing-fa5ae",
+            storageBucket: "introducing-fa5ae",
+            messagingSenderId: "190395607602",
+            appId: "1:190395607602:web:5024130aaa95b9285f2a2b",
+            measurementId: "G-YJFDJBS7SN"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // 방명록 데이터 가져오기 및 실시간 업데이트
+        function fetchGuestbook() {
+            const guestbookRef = collection(db, 'guestbook');
+            const q = query(guestbookRef, orderBy('createdAt', 'desc'));
+            onSnapshot(q, (snapshot) => {
+                const guestbookData = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+
+                const tableBody = document.getElementById('guestbookTableBody');
+                tableBody.innerHTML = ''; // 기존 데이터 초기화
+                guestbookData.forEach(entry => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `<td>${entry.name}</td><td>${entry.message}</td>`;
+                    tableBody.appendChild(row);
+                });
+            });
+        }
+
+        // 페이지 로딩 시 방명록 데이터 가져오기
+        document.addEventListener('DOMContentLoaded', fetchGuestbook);
+
+
+        // 방명록 팝업페이지 열기
+        document.getElementById('openGuestbook').onclick = function () {
+            window.open(
+                'guestbook.html',
+                '방명록',
+                'width=1000,height=600,' +
+                'top=' + (window.screen.height / 2 - 350) + ',' +
+                'left=' + (window.screen.width / 2 - 500)
+            );
+        }
+
+        // 사원증 상세페이지 열기
+        document.getElementById('clickimage').onclick = function () {
+            window.open(
+                'introduction.html', // 채원님 상세페이지 html 넣기
+                'title 명',
+                'width=1000,height=600,' +  //팝업크기
+                'top=' + (window.screen.height / 2 - 350) + ',' +  //화면 중앙에 뜨게하기
+                'left=' + (window.screen.width / 2 - 500)
+            );
+        }
+    </script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+            <div class="container-fluid py-5" style="color: rgb(255, 249, 237); width: 700px; margin-left: 0;">
+                <h1 class="display-5 fw-bold" style="font-size: 120px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+                    상부3조
+                </h1>
+                <p class="col-md-8 fs-4"
+                    style="font-size: 50px !important; font-weight: 700; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">상부상조(相扶相助)의
+                    의미를 담아 각자의 강점을 살려 협력하여 최상의 결과를 만들어내는 팀입니다.</p>
+            </div>
+        </div>
+    </div>
+    <div class="text-box">
+        
+            <h2>⭐ 우리 팀 규칙</h2>
+            <div class="box1">
+                <p><img src="https://cdn-icons-png.flaticon.com/512/8068/8068016.png" alt="number 1 icon" width="30">
+                    말 예쁘게 하며 협력하겠습니다.</p>
+                <p><img src="https://cdn-icons-png.flaticon.com/512/8068/8068072.png" alt="number 2 icon" width="30">
+                    자리 비움이나 문제가 생기면 빠르게 공유하겠습니다.</p>
+                <p><img src="https://cdn-icons-png.flaticon.com/512/8068/8068126.png" alt="number 3 icon" width="30">
+                    실수나 문제가 있어도 살짝 놀리고 함께 문제해결 능력을 키워나가겠습니다. 오히려 좋아</p>
+                <p><img src="https://cdn-icons-png.flaticon.com/512/8068/8068185.png" alt="number 4 icon" width="30">
+                    대화를 할 때는 마이크도 켜고 화면공유와 함께 잘 소통하겠습니다.</p>
+                <p><img src="https://cdn-icons-png.flaticon.com/512/8068/8068239.png" alt="number 5 icon" width="30">
+                    상부상조하는 3조 하겠습니다. 🫶</p>
+            </div>
+        
+        
+            <h2>⭐ 우리 팀 목표</h2>
+            <div class="box1">
+                <p><img src="https://cdn-icons-png.flaticon.com/512/14865/14865963.png" alt="number one icon"
+                        width="30">
+                    데일리 스크럼 작성 및 실천하기</p>
+                <p><img src="https://cdn-icons-png.flaticon.com/512/14866/14866025.png" alt="number two icon"
+                        width="30">
+                    부끄러워도 물어보기</p>
+                <p><img src="https://cdn-icons-png.flaticon.com/512/14866/14866036.png" alt="number three icon"
+                        width="30">
+                    이번 프로젝트 포트폴리오로 사용하기</p>
+                <p><img src="https://cdn-icons-png.flaticon.com/512/14866/14866047.png" alt="number four icon"
+                        width="30">
+                    1일 1TIL & 1알고리즘 📝</p>
+                <p><img src="https://cdn-icons-png.flaticon.com/512/14866/14866058.png" alt="number five icon"
+                        width="30">
+                    끝까지 사이좋기</p>
+            </div>
+        
+    </div>
+
+    <h2>⭐ 팀원소개</h2>
+    <div class="row row-cols-1 row-cols-md-2 g-2">
+        <div class="q1">
+            <div class="background">
+                <div class="sub_box">
+                <img src="https://teamsparta.notion.site/image/attachment%3A450155ed-0306-4f83-a8b5-a222564098ce%3AKakaoTalk_20250218_211025543.jpg?table=block&id=19e2dc3e-f514-803f-a1fb-c870df9929d5&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=1390&userId=&cache=v2"
+                    alt="Foreground Image" class="foreground-image">
+                    <div class="txt_box">
+                        <span>자세히 보기</span>
+                    </div>
+                    <div class="sub_text">
+                        <p class="title">팀장</p>
+                        <p class="name">김지환</p>
+                    </div>
+                </div>   
+            </div>
+        </div>
+        <div class="q1">
+            <div class="background">
+                <div class="sub_box">
+                <img src="https://teamsparta.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F83c75a39-3aba-4ba4-a792-7aefe4b07895%2F0d5174cf-b043-41d6-b407-06fc17a82257%2FKakaoTalk_Photo_2025-01-17-16-45-33.jpeg?table=block&id=546419e6-f3d6-493d-8ec1-b052af7aa58c&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=1390&userId=&cache=v2"
+                    alt="Foreground Image" class="foreground-image">
+                    <div class="txt_box">
+                        <span>자세히 보기</span>
+                    </div>
+                    <div class="sub_text">
+                        <p class="title">팀원</p>
+                        <p class="name">김채원</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="q2">
+            <div class="background">
+                <div class="sub_box">
+                <img src="https://teamsparta.notion.site/image/attachment%3A854e2e66-ed7f-4e19-a0c2-1c1cbbdaa968%3AKakaoTalk_20250218_194905462.jpg?table=block&id=19e2dc3e-f514-80ab-a1df-ea7811205e11&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=1390&userId=&cache=v2"
+                    alt="Foreground Image" class="foreground-image">
+                    <div class="txt_box">
+                        <span>자세히 보기</span>
+                    </div>
+                    <div class="sub_text">
+                        <p class="title">팀원</p>
+                        <p class="name">김하정</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="q2">
+            <div class="background">
+                <div class="sub_box">
+                <img src="https://teamsparta.notion.site/image/attachment%3A3d53d744-e179-440f-8007-6a298f3e1ec5%3AKakaoTalk_Photo_2025-02-18-20-41-31.jpeg?table=block&id=19e2dc3e-f514-8084-bc8e-dbbaa19cbb34&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=1390&userId=&cache=v2"
+                    alt="Foreground Image" class="foreground-image">
+                    <div class="txt_box">
+                        <span>자세히 보기</span>
+                    </div>
+                    <div class="sub_text">
+                        <p class="title">팀원</p>
+                        <p class="name">강동연</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- 방명록 테이블-->
+     <div class="bottom">
+        <h2>방명록</h2>
+        <div class="guest_box">
+            <button type="button" class="btn btn-outline-info" style="float:right;" id="openGuestbook">글쓰기</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>이름</th>
+                        <th>내용</th>
+                    </tr>
+                </thead>
+                <tbody id="guestbookTableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</body>
+
+</html>
