@@ -107,20 +107,19 @@
 ## 4. 페이지별 기능
 
 ### [초기화면]
-- 서비스 접속 초기화면으로 splash 화면이 잠시 나온 뒤 다음 페이지가 나타납니다.
-    - 로그인이 되어 있지 않은 경우 : SNS 로그인 페이지
-    - 로그인이 되어 있는 경우 : README 홈 화면
-- SNS(카카오톡, 구글, 페이스북) 로그인 기능은 구현되어 있지 않습니다.
+- 서비스 접속 초기화면으로 백그라운드 이미지를 스크롤 내려도 중간까지 보이도록 효과를 줬습니다.
+- 
 
 | 초기화면 |
 |----------|
-|![main]([https://private-user-images.githubusercontent.com/194772779/415160875-853dbaaf-0d09-4e2a-aff4-9485d86d78cf.gif?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDAwNTI5MTgsIm5iZiI6MTc0MDA1MjYxOCwicGF0aCI6Ii8xOTQ3NzI3NzkvNDE1MTYwODc1LTg1M2RiYWFmLTBkMDktNGUyYS1hZmY0LTk0ODVkODZkNzhjZi5naWY_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMjIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDIyMFQxMTU2NThaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yYzQzZDkwNjE3MjhlNDZlODJhMjQwOWMwNmUxM2MyZTVjNGMwMWMwMmQxM2RiZGE3NjI5ZDYyZmNhZGU1Y2M3JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.Xr4wOYVT8rohgZBDc4n6FxVJ4FJWpkWyixw5W7LmfVA)|
+|![join](https://private-user-images.githubusercontent.com/194772779/415160875-853dbaaf-0d09-4e2a-aff4-9485d86d78cf.gif?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDAwNTMxNTAsIm5iZiI6MTc0MDA1Mjg1MCwicGF0aCI6Ii8xOTQ3NzI3NzkvNDE1MTYwODc1LTg1M2RiYWFmLTBkMDktNGUyYS1hZmY0LTk0ODVkODZkNzhjZi5naWY_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMjIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDIyMFQxMjAwNTBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wMTFjMDM2MzM1YWRlMzE1OGE4OGU0ZDg0YTNkMDExMGViYjUxNmFkN2Q2ZTgwODI2N2MxYjIxMDZmMmM5YzZhJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.Oa_pQSYHJWEG2R77s5FUzk-XjBzMTOQ0-ShPN_PomIw)|
 
 <br>
 
 ### [방명록]
 - 메인 페이지 하단의 글쓰기 버튼을 통해 진입할 수 있습니다.
-- 
+- 이름과 내용을 기입하고 완료 버튼을 클릭하면 알림 팝업이 뜹니다.
+- 기입한 내용은 방명록 란에 등록됩니다.
 
 | 방명록 |
 |----------|
@@ -136,6 +135,7 @@
 - 하단 QnA를 통해 간단한 질의응답을 주고받을 수 있습니다.
 | 페이지 방문 |
 |----------|
+|![join](https://private-user-images.githubusercontent.com/194772779/415160774-6f13b508-3b42-4244-8f63-9c6a75d5e6c0.gif?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDAwNTI4NjQsIm5iZiI6MTc0MDA1MjU2NCwicGF0aCI6Ii8xOTQ3NzI3NzkvNDE1MTYwNzc0LTZmMTNiNTA4LTNiNDItNDI0NC04ZjYzLTljNmE3NWQ1ZTZjMC5naWY_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMjIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDIyMFQxMTU2MDRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iYjY4Yjk3MDVkMWNjMjhhNWQxMjIzYTRlOGJhMWUwMDEyNDA2Y2FhM2VhZDE0NWJjNjM0NjQwYWNjYTE3ZWRjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.b0DvCOyLqbITS1UjKdEHU5ZM2FzRMUDgrM5PfJJOLHI)|
 |![IntroducePage](https://github.com/user-attachments/assets/7c73c3fc-2f34-4157-8388-133ca0105a12)%7C
 
 <br>
