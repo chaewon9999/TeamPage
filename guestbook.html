@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,8 +26,8 @@
         const db = getFirestore(app);
 
         // 방명록 제출 
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('guestbookForm').onsubmit = async function(event) {
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('guestbookForm').onsubmit = async function (event) {
                 event.preventDefault(); // none 입력 금지코드
                 const name = document.getElementById('name').value;
                 const message = document.getElementById('message').value;
@@ -53,13 +54,14 @@
             }
 
             // 닫기 버튼 클릭 시 팝업 닫기
-            document.getElementById('closePopup').onclick = function() {
+            document.getElementById('closePopup').onclick = function () {
                 window.close(); // 현재 팝업 창 닫기
             }
         });
     </script>
-    
+
 </head>
+
 <body>
     <h2>방명록 작성</h2>
     <form id="guestbookForm">
@@ -75,4 +77,5 @@
         <button type="button" id="closePopup">닫기</button>
     </form>
 </body>
+
 </html>
