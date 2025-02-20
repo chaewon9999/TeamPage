@@ -136,7 +136,7 @@
 - 하단 QnA를 통해 간단한 질의응답을 주고받을 수 있습니다.
 | 페이지 방문 |
 |----------|
-|![IntroducePage](https://files.slack.com/files-tmb/T06B9PCLY1E-F08E6HU9G2W-09c5fd9d99/__________________________________gif_360.gif)%7C
+|![IntroducePage](https://github.com/user-attachments/assets/7c73c3fc-2f34-4157-8388-133ca0105a12)%7C
 
 <br>
 
@@ -149,7 +149,7 @@
 -토글을 통해 답변이 등록된 것을 확인할 수 있습니다.
 |QnA 등록하기 |
 |----------|
-|![QnA](https://files.slack.com/files-tmb/T06B9PCLY1E-F08DZQKAB9C-5be9875564/qna_gif_360.gif)%7C
+|![QnA](https://github.com/user-attachments/assets/6332338a-3206-4e1a-bd33-ba1b1d111b99)%7C
 
 <br>
 
