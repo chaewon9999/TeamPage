@@ -23,8 +23,8 @@
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
 
-        // 변경된 부분: 페이지별 컬렉션 이름 설정
-        const collectionName = 'qna_1'; // 페이지 1의 경우
+        
+        const collectionName = 'qna_1'; 
 
         function fetchComments() {
             const commentsRef = collection(db, collectionName); // 변경된 부분
@@ -87,6 +87,13 @@
                 return;
             }
 
+            const password = prompt('비밀번호를 입력하세요:');
+            const correctPassword = '0000'; 
+
+            if (password !== correctPassword) {
+                alert('비밀번호가 틀렸습니다.');
+                return; 
+            }
             try {
                 const commentRef = doc(db, collectionName, commentId); // 변경된 부분
                 await updateDoc(commentRef, {

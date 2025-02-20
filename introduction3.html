@@ -23,11 +23,11 @@
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
 
-        // 변경된 부분: 페이지별 컬렉션 이름 설정
-        const collectionName = 'qna_3'; // 페이지 1의 경우
+        
+        const collectionName = 'qna_3'; 
 
         function fetchComments() {
-            const commentsRef = collection(db, collectionName); // 변경된 부분
+            const commentsRef = collection(db, collectionName);
             const q = query(commentsRef, orderBy('createdAt', 'desc'));
             onSnapshot(q, (snapshot) => {
                 const commentsData = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
@@ -60,7 +60,7 @@
                 const question = document.getElementById('question').value;
 
                 try {
-                    await addDoc(collection(db, collectionName), { // 변경된 부분
+                    await addDoc(collection(db, collectionName), { 
                         question: question,
                         createdAt: new Date()
                     });
@@ -85,6 +85,14 @@
             if (!answer) {
                 alert('답변을 입력하세요.');
                 return;
+            }
+
+            const password = prompt('비밀번호를 입력하세요:');
+            const correctPassword = '0000'; 
+
+            if (password !== correctPassword) {
+                alert('비밀번호가 틀렸습니다.');
+                return; 
             }
 
             try {
