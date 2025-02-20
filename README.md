@@ -1,8 +1,5 @@
 # 상부상조(相扶相助) 하는 상부3조
 
-### ![SpongbobeGIF](https://github.com/user-attachments/assets/940192c9-b6c5-4166-9bbd-02b499a0fe25)
-// 예시로 넣어본 gif
-
 <br>
 
 <img src="https://s3.ap-northeast-2.amazonaws.com/blog.spartacodingclub.kr/sparta-supporters.png">
@@ -135,8 +132,9 @@
 - 하단 QnA를 통해 간단한 질의응답을 주고받을 수 있습니다.
 | 페이지 방문 |
 |----------|
-|![join](https://private-user-images.githubusercontent.com/194772779/415160774-6f13b508-3b42-4244-8f63-9c6a75d5e6c0.gif?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDAwNTI4NjQsIm5iZiI6MTc0MDA1MjU2NCwicGF0aCI6Ii8xOTQ3NzI3NzkvNDE1MTYwNzc0LTZmMTNiNTA4LTNiNDItNDI0NC04ZjYzLTljNmE3NWQ1ZTZjMC5naWY_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMjIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDIyMFQxMTU2MDRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iYjY4Yjk3MDVkMWNjMjhhNWQxMjIzYTRlOGJhMWUwMDEyNDA2Y2FhM2VhZDE0NWJjNjM0NjQwYWNjYTE3ZWRjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.b0DvCOyLqbITS1UjKdEHU5ZM2FzRMUDgrM5PfJJOLHI)|
-|![IntroducePage](https://github.com/user-attachments/assets/7c73c3fc-2f34-4157-8388-133ca0105a12)%7C
+|![join](https://private-user-images.githubusercontent.com/194772779/415161057-0dcbb678-7fbc-4799-a30c-7c3160db2a23.gif?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDAwNTM3MzQsIm5iZiI6MTc0MDA1MzQzNCwicGF0aCI6Ii8xOTQ3NzI3NzkvNDE1MTYxMDU3LTBkY2JiNjc4LTdmYmMtNDc5OS1hMzBjLTdjMzE2MGRiMmEyMy5naWY_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMjIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDIyMFQxMjEwMzRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jOWVlOTAxNDNmMWYwN2MwODllODI0YWQxMGNjOTUyMmNlNDA5OGM1YmEzZDAzMmEzYTFiYTY2MGQzY2FiNTg2JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.kaiAaLGnQ_e6UB2eEcXKdEm1kMfn1RfZt5WniMYlEAk)|
+|----------|
+|![IntroducePage](https://github.com/user-attachments/assets/7c73c3fc-2f34-4157-8388-133ca0105a12)|
 
 <br>
 
@@ -149,7 +147,7 @@
 -토글을 통해 답변이 등록된 것을 확인할 수 있습니다.
 |QnA 등록하기 |
 |----------|
-|![QnA](https://github.com/user-attachments/assets/6332338a-3206-4e1a-bd33-ba1b1d111b99)%7C
+|![QnA](https://github.com/user-attachments/assets/6332338a-3206-4e1a-bd33-ba1b1d111b99)|
 
 <br>
 
