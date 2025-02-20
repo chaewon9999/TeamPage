@@ -1,29 +1,29 @@
 # 📖 ㅇㅇㅇ
 
-![readme_mockup2](https://user-images.githubusercontent.com/112460466/210706312-6a44b60d-a42e-4210-b334-9e5983f70fb3.png)
 
-- 배포 URL : https://ohmycode-readme.netlify.app
-- Test ID : readme@test.com
-- Test PW : 123123
+
+- 배포 URL :
+- Test ID :
+- Test PW :
 
 <br>
 
 ## 프로젝트 소개
 
-- README는 책을 좋아하는 사람들이 자신의 책 취향을 공유하고, 다 읽은 책을 판매할 수 있는 SNS입니다.
-- 개인의 프로필 페이지에 좋아하는 구절 등 책에 대한 정보를 작성하고 판매하고 싶은 책을 등록할 수 있습니다.
-- 검색을 통해 책 취향이 비슷한 다른 유저들의 피드를 구경할 수 있습니다.
-- 다양한 유저들을 팔로우하며 마음에 드는 게시글에 좋아요를 누르거나 댓글을 작성할 수 있습니다.
+- 팀원들의 정보를 효율적으로 소개
+- 데이터 베이스를 활용한 방문자와 소통 기능 구현
+- 개인적으로 궁금한 것을 묻고 답할 수 있는 QnA 커뮤니티 공간
+
 
 <br>
-222
+
 ## 팀원 구성
 
 <div align="center">
 
-| **고지연** | **김민제** | **양희지** | **지창언** |
+| **김지환** | **김채원** | **김하정** | **강동연** |
 | :------: |  :------: | :------: | :------: |
-| [<img src="https://avatars.githubusercontent.com/u/106502312?v=4" height=150 width=150> <br/> @yeon1615](https://github.com/yeon1615) | [<img src="https://avatars.githubusercontent.com/u/112460466?v=4" height=150 width=150> <br/> @Cheorizzang](https://github.com/Cheorizzang) | [<img src="https://avatars.githubusercontent.com/u/112460506?v=4" height=150 width=150> <br/> @heejiyang](https://github.com/heejiyang) | [<img src="https://avatars.githubusercontent.com/u/76766459?v=4" height=150 width=150> <br/> @journey-ji](https://github.com/journey-ji) |
+| [<img src="https://img.notionusercontent.com/s3/prod-files-secure%2F83c75a39-3aba-4ba4-a792-7aefe4b07895%2F450155ed-0306-4f83-a8b5-a222564098ce%2FKakaoTalk_20250218_211025543.jpg/size/w=1390?exp=1740123801&sig=-tx4oZZQIki3B9akRAkdWDFeQm3ZwkFAcQrWABxp6iw" height=150 width=150> <br/> @좌니의일지](https://computerreport.tistory.com/) | [<img src="https://img.notionusercontent.com/s3/prod-files-secure%2F83c75a39-3aba-4ba4-a792-7aefe4b07895%2F0d5174cf-b043-41d6-b407-06fc17a82257%2FKakaoTalk_Photo_2025-01-17-16-45-33.jpeg/size/w=1390?exp=1740123891&sig=nNLTEy0ly2WpOvok5xonimO7pavxYDr5Qmrau6rlXAw" height=150 width=150> <br/> @w0729](https://velog.io/@w0729/posts) | [<img src="https://img.notionusercontent.com/s3/prod-files-secure%2F83c75a39-3aba-4ba4-a792-7aefe4b07895%2F854e2e66-ed7f-4e19-a0c2-1c1cbbdaa968%2FKakaoTalk_20250218_194905462.jpg/size/w=1390?exp=1740123931&sig=jMhy4vpxRki6ie0_JN2k4uR0WfDFPiOjk2dNOj0GnE8" height=150 width=150> <br/> @jess_kim](https://velog.io/@jess_kim/posts) | [<img src="https://img.notionusercontent.com/s3/prod-files-secure%2F83c75a39-3aba-4ba4-a792-7aefe4b07895%2F3d53d744-e179-440f-8007-6a298f3e1ec5%2FKakaoTalk_Photo_2025-02-18-20-41-31.jpeg/size/w=1390?exp=1740123954&sig=k9EHNnCjQUR2bLII_WEST0fgLiKTHLf0YWf6aERNJ8U" height=150 width=150> <br/> @kangdy115](https://kangdy115.tistory.com/) |
 
 </div>
 
@@ -31,12 +31,13 @@
 
 ## 1. 개발 환경
 
-- Front : HTML, React, styled-components, Recoil
-- Back-end : 제공된 API 활용
-- 버전 및 이슈관리 : Github, Github Issues, Github Project
-- 협업 툴 : Discord, Notion, Github Wiki
-- 서비스 배포 환경 : Netlify
-- 디자인 : [Figma](https://www.figma.com/file/fAisC2pEKzxTOzet9CfqML/README(oh-my-code)?node-id=39%3A1814)
+- Visual Studio Code
+- Firebase
+- Git, GitHub
+- JavaScript
+- 버전 및 이슈관리 : Github, Github Project
+- 협업 툴 : slack, zep
+- 디자인 : [stylesheet](css/main.css)
 - [커밋 컨벤션](https://github.com/likelion-project-README/README/wiki/%EC%BB%A4%EB%B0%8B-%EC%BB%A8%EB%B2%A4%EC%85%98)
 - [코드 컨벤션](https://github.com/likelion-project-README/README/wiki/%EC%BD%94%EB%93%9C-%EC%BB%A8%EB%B2%A4%EC%85%98)
 - [스프라이트](https://github.com/likelion-project-README/README/wiki/%EC%8A%A4%ED%94%84%EB%9D%BC%EC%9D%B4%ED%8A%B8)
