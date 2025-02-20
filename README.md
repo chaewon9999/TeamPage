@@ -114,7 +114,7 @@
 
 | 초기화면 |
 |----------|
-|![splash]([https://files.slack.com/files-tmb/T06B9PCLY1E-F08E3KB1CLD-fe678b2465/________________gif_360.gif](https://files.slack.com/files-tmb/T06B9PCLY1E-F08E6HU9G2W-09c5fd9d99/__________________________________gif_360.gif)%7C))|
+|![main]([https://private-user-images.githubusercontent.com/194772779/415160875-853dbaaf-0d09-4e2a-aff4-9485d86d78cf.gif?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDAwNTI5MTgsIm5iZiI6MTc0MDA1MjYxOCwicGF0aCI6Ii8xOTQ3NzI3NzkvNDE1MTYwODc1LTg1M2RiYWFmLTBkMDktNGUyYS1hZmY0LTk0ODVkODZkNzhjZi5naWY_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMjIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDIyMFQxMTU2NThaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yYzQzZDkwNjE3MjhlNDZlODJhMjQwOWMwNmUxM2MyZTVjNGMwMWMwMmQxM2RiZGE3NjI5ZDYyZmNhZGU1Y2M3JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.Xr4wOYVT8rohgZBDc4n6FxVJ4FJWpkWyixw5W7LmfVA)|
 
 <br>
 
@@ -150,18 +150,6 @@
 |QnA 등록하기 |
 |----------|
 |![QnA](https://github.com/user-attachments/assets/6332338a-3206-4e1a-bd33-ba1b1d111b99)%7C
-
-<br>
-
-#### 3. 좋아요와 댓글
-- 좋아요와 댓글 수는 실시간으로 상세 페이지에 반영됩니다.
-- 댓글이 몇 분 전에 작성되었는지 표시됩니다.
-- 자신의 댓글일 경우 모달 버튼을 통해 삭제가 가능합니다. 댓글을 삭제하고 페이지를 리렌더링하여 삭제된 내용을 페이지에 반영
-- 타 유저의 댓글일 경우 모달 버튼을 통해 신고할 수 있습니다.
-
-| 좋아요 & 댓글 |
-|----------|
-|![likeComment](https://user-images.githubusercontent.com/112460466/210382217-01d70181-91c3-43db-a1b8-409a612afb1c.gif)|
 
 <br>
 
