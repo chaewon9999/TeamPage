@@ -64,7 +64,7 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -30%);
+            transform: translate(-50%, -56%);
             width: 195px;
             height: 173px;
             border-radius: 5%;
@@ -125,7 +125,7 @@
             position: absolute;
             top: 65%;
             left: 50%;
-            transform: translate(-50%, -36%);
+            transform: translate(-50%, -40%);
             opacity: 0;
             transition: all 0.4s ease-in-out;
         }
@@ -139,7 +139,7 @@
             top: 87%;
             left: 50%;
             text-align: center;
-            transform: translate(-50%, -3%);
+            transform: translate(-50%, -69%);
             transition: all 0.3s ease-in;
         }
 
@@ -163,7 +163,7 @@
             width: 210px;
             height: 390px;
             position: absolute;
-            transform: translate(93%, 14%);
+            transform: translate(93%, 26%);
             cursor: pointer;
             transition: all 0.3s ease-in;
         }
