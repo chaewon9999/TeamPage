@@ -38,9 +38,7 @@
 - 버전 및 이슈관리 : Github, Github Project
 - 협업 툴 : slack, zep
 - 디자인 : [stylesheet](css/main.css)
-- [커밋 컨벤션](https://github.com/likelion-project-README/README/wiki/%EC%BB%A4%EB%B0%8B-%EC%BB%A8%EB%B2%A4%EC%85%98)
-- [코드 컨벤션](https://github.com/likelion-project-README/README/wiki/%EC%BD%94%EB%93%9C-%EC%BB%A8%EB%B2%A4%EC%85%98)
-- [스프라이트](https://github.com/likelion-project-README/README/wiki/%EC%8A%A4%ED%94%84%EB%9D%BC%EC%9D%B4%ED%8A%B8)
+
 <br>
 
 ## 2. 채택한 개발 기술과 브랜치 전략
