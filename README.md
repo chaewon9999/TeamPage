@@ -126,11 +126,17 @@
 
 ### [팀 소개 상세페이지]
 #### 1. 페이지 방문
--사원증 사진 클릭을 통해 진입할 수 있습니다.
+- 사원증 사진 클릭을 통해 진입할 수 있습니다.
 - 사원증 사진이 위아래로 움직입니다.
 - ABOUT ME 안에 간단한 자기소개를 작성했습니다.
 - 하단 QnA를 통해 간단한 질의응답을 주고받을 수 있습니다.
   
+| 페이지 방문 |
+|----------|
+|![IntroducePage](https://github.com/user-attachments/assets/7c73c3fc-2f34-4157-8388-133ca0105a12)|
+
+<br>
+
 | 페이지 방문 |
 |----------|
 |![IntroducePage](https://github.com/user-attachments/assets/7c73c3fc-2f34-4157-8388-133ca0105a12)|
