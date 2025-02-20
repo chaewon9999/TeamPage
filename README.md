@@ -133,7 +133,7 @@
   
 | 페이지 방문 |
 |----------|
-|![IntroducePage](https://github.com/user-attachments/assets/7c73c3fc-2f34-4157-8388-133ca0105a12)|
+|![IntroducePage](https://github.com/user-attachments/assets/0dcbb678-7fbc-4799-a30c-7c3160db2a23)|
 
 <br>
 
