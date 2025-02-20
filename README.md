@@ -103,11 +103,11 @@
 
 ## 4. 페이지별 기능
 
-### [초기화면]
-- 서비스 접속 초기화면으로 백그라운드 이미지를 스크롤 내려도 중간까지 보이도록 효과를 줬습니다.
-- 
+### [메인화면]
+- 메인화면으로 백그라운드 이미지를 스크롤 내려도 중간까지 보이도록 효과를 줬습니다.
+- 팀 규칙, 팀 목표, 팀원 소개, 방명록으로 구성되었습니다.
 
-| 초기화면 |
+| 메인화면 |
 |----------|
 |![join](https://private-user-images.githubusercontent.com/194772779/415160875-853dbaaf-0d09-4e2a-aff4-9485d86d78cf.gif?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDAwNTMxNTAsIm5iZiI6MTc0MDA1Mjg1MCwicGF0aCI6Ii8xOTQ3NzI3NzkvNDE1MTYwODc1LTg1M2RiYWFmLTBkMDktNGUyYS1hZmY0LTk0ODVkODZkNzhjZi5naWY_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMjIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDIyMFQxMjAwNTBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wMTFjMDM2MzM1YWRlMzE1OGE4OGU0ZDg0YTNkMDExMGViYjUxNmFkN2Q2ZTgwODI2N2MxYjIxMDZmMmM5YzZhJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.Oa_pQSYHJWEG2R77s5FUzk-XjBzMTOQ0-ShPN_PomIw)|
 
