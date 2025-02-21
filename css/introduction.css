@@ -17,8 +17,8 @@
 
         .background {
             background: linear-gradient(#F0586A, white);
-        width: 100vw;
-        height: 100vh;
+            width: 100vw;
+            height: 100vh;
         }
 
         /*내용 입력부분*/
@@ -55,28 +55,28 @@
 
         .idCard {
             width: 600px;
-        height: 650px;
+            height: 650px;
 
-        margin-left: 200px;
+            margin-left: 200px;
 
-        animation: floating 3s ease-in-out infinite;
+            animation: floating 3s ease-in-out infinite;
         }
 
         .picture {
             position: absolute;
-        width: 170px;
-        height: 170px;
+            width: 170px;
+            height: 170px;
 
-        margin: 280px 0px 0px 200px;
-        border-radius: 10px;
+            margin: 280px 0px 0px 200px;
+            border-radius: 10px;
 
-        animation: floating 3s ease-in-out infinite;
+            animation: floating 3s ease-in-out infinite;
         }
 
         .intro {
             position: absolute;
-            top: 68%;
-            left: 45%;
+            top: 70%;
+            left: 62%;
             transform: translateX(-50%);
             text-align: center;
             font-size: 30px;
