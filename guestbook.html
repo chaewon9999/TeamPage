@@ -37,7 +37,7 @@
                     await addDoc(collection(db, 'guestbook'), {
                         name: name,
                         message: message,
-                        createdAt: new Date() // 글 순서대로 넣기위한 
+                        createdAt: new Date() // 글 순서대로 넣기위한 입력시간저장
                     });
 
                     alert('완료되었습니다.');
